@@ -8,3 +8,5 @@ This application shows the skills I have accumulated throughout my experience du
 4. [LinkedIn](https://www.linkedin.com/in/angel-alexander-1171571a5/)
 
 I have included my first project and two other homework assignments that I thought were my best works so far in the class.
+
+![Portfolio app Screenshot](Assets/Images/portfolio-screenshot.png)
