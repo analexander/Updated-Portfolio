@@ -1,73 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <title>Contact</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <title>Contact</title>
 </head>
+
 <body>
   <header>
     <div class="d-md-none">Angel Alexander</div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="index.html"><span class="d-none d-md-block d-xl-none">Angel Alexander</span></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">About Me<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/analexander" target="_blank">GitHub</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/in/angel-alexander-1171571a5/" target="_blank">LinkedIn</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://docs.google.com/document/d/e/2PACX-1vRIDbxm8dCUo8dCUXuqeNqHuIv-RgfXakkY2m0QcuETLT1fyBXTWUoihEOijebva6fRYUcEJVCUPfjp/pub" target="_blank">Resume</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"><span class="d-none d-md-block d-xl-none">Angel Alexander</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">About Me<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/analexander" target="_blank">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/angel-alexander-1171571a5/"
+              target="_blank">LinkedIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+              href="https://docs.google.com/document/d/e/2PACX-1vRIDbxm8dCUo8dCUXuqeNqHuIv-RgfXakkY2m0QcuETLT1fyBXTWUoihEOijebva6fRYUcEJVCUPfjp/pub"
+              target="_blank">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
   <main>
     <div class="container">
 
-    <h2>Contact</h2>
-    <hr>
-        <div class="form-group">
+      <h2>Contact</h2>
+      <hr>
+<div class="form-group">
+  <form id="my-form" action="https://formspree.io/f/xeqpgbwz" method="POST">
           <label for="formGroupExampleInput">Name</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Jane Doe">
+          <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Jane Doe">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">Email</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Name@example.com">
+          <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="Name@example.com">
         </div>
          <div class="form-group">
         <label for="exampleFormControlTextarea1">Message</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <br>
+        <button type="submit" id="my-form-button" class="btn btn-primary">Submit</button>
+        <p id="my-form-status"></p>
+      </form>
+      <br>
     </div>
   </main>
-    <footer class="footer mt-auto py-3 text-center">
-      <span class="text-muted">© 2020 Copyright</span>
-   </footer>
+  <footer class="footer mt-auto py-3 text-center">
+    <span class="text-muted">© 2020 Copyright</span>
+  </footer>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+    
+    var form = document.getElementById("my-form");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
+
+    // Success and Error functions for after the form is submitted
+    
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.innerHTML = "Thanks for contacting me! I will be in touch with you soon.";
+    }
+
+    function error() {
+      status.innerHTML = "Oops! There was a problem.";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+  
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+</script>
+
 </html>
