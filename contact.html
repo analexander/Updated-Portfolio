@@ -53,21 +53,22 @@
 
       <h2>Contact</h2>
       <hr>
-<div class="form-group">
-  <form id="my-form" action="https://formspree.io/f/xeqpgbwz" method="POST">
+      <div class="form-group">
+        <form id="my-form" action="https://formspree.io/f/xeqpgbwz" method="POST">
           <label for="formGroupExampleInput">Name</label>
           <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Jane Doe">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Email</label>
-          <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="Name@example.com">
-        </div>
-         <div class="form-group">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Email</label>
+        <input type="email" name="email" class="form-control" id="formGroupExampleInput2"
+          placeholder="Name@example.com">
+      </div>
+      <div class="form-group">
         <label for="exampleFormControlTextarea1">Message</label>
         <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <button type="submit" id="my-form-button" class="btn btn-primary">Submit</button>
-        <p id="my-form-status"></p>
+      </div>
+      <button type="submit" id="my-form-button" class="btn btn-primary">Submit</button>
+      <p id="my-form-status"></p>
       </form>
       <br>
     </div>
@@ -87,16 +88,16 @@
     crossorigin="anonymous"></script>
 </body>
 <script>
-  window.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
-    
+
     var form = document.getElementById("my-form");
     var button = document.getElementById("my-form-button");
     var status = document.getElementById("my-form-status");
 
     // Success and Error functions for after the form is submitted
-    
+
     function success() {
       form.reset();
       button.style = "display: none ";
@@ -109,20 +110,20 @@
 
     // handle the form submission event
 
-    form.addEventListener("submit", function(ev) {
+    form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var data = new FormData(form);
       ajax(form.method, form.action, data, success, error);
     });
   });
-  
+
   // helper function for sending an AJAX request
 
   function ajax(method, url, data, success, error) {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         success(xhr.response, xhr.responseType);
